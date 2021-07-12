@@ -78,7 +78,7 @@ public class SignOn extends setUp {
         }
     }
 
-    //if test 5 and 6 are same how can i make it same an di dont have to write it down again.
+
     //Validate sign-in feature is working?
     @Test(priority = 6)
     public void SignIn() {
@@ -132,13 +132,16 @@ public class SignOn extends setUp {
 
         WebElement Continue = driver.findElement(By.name("findFlights"));
         Continue.click();
+    }
+
+    //8.SIGN OFF
+    @Test(dependsOnMethods = {"SignIn"})
+    public void Logout() {
+        driver.findElement(By.linkText("SIGN-OFF")).click();
 
 
     }
 }
-//git
-//push branch tc0076 wth name to origin
-//create pull request to  merge branch tc0076  with master
 
 
 //for 8
